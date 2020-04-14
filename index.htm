@@ -159,11 +159,17 @@ document.write(`<div class="container">
 
 
   <!--.............................Web Component Footer start.........................-->
-  <div id="footer"></div>
+  <my-footer id="footer"></my-footer>
 <script type="text/babel">
-    //Web component footer
-const getMessage = () => "Web component footer will come here";
-document.getElementById('footer').innerHTML = getMessage();
+   //THIS A WEB COMPONENT
+class Footer extends HTMLElement{
+  constructor(){
+      super();
+      this.innerHTML=`I am a web component`
+  }
+  }
+  
+  window.customElements.define('my-footer',Footer);
 </script>
 <!-----------------------Web Component Footer end---------------->
 
