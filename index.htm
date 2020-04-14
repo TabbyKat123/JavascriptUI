@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script UI</title>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- JQUERY LIBRARY -->  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- REACT LIBRARY -->
+        <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+        <!-- REACT DOM LIBRARY -->
+        <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+        <div id="output"></div>
+        <!-- Load Babel -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <!--.........................React Component Header Start.................................-->
+    <div id="nav"></div>
+<script type="text/babel">
+     //React Navbar
+    const MyReactComponent = () => {
+        return (
+          <div>
+            <nav>
+    <div className="nav-wrapper">
+      <a href="#" className="brand-logo">Logo</a>
+      <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <li><a href="sass.html">React</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav></div>
+        );
+      };
+const domContainer = document.querySelector('#nav');
+ReactDOM.render(<MyReactComponent />, domContainer);
+  </script>
+  <!--............................React Component Footer End.........................-->
+
+
+
+
+  <!--.............................jquery carousel start.........................-->
+  <p>
+    Jquery carousel should be here click me,i will disappear
+  <p>
+<script>
+    //jquery carousel here
+    $(document).ready(function(){
+      $("p").click(function(){
+        $(this).hide();
+      });
+    });
+</script>
+
+  <!--.............................jquery carousel End.........................-->
+
+
+
+ <!--............................Vanilla js table start.........................-->
+ <script>
+   //search function
+   function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("table");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+   //table
+document.write(`<div class="container">
+
+  <h2>Available Destinations</h2>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Where do you want to go.." title="Type in a destination">
+  
+  <table class="responsive-table" id="table">
+    <thead>
+      <tr>
+          <th>Destination</th>
+          <th>Distance</th>
+          <th>Price (USD)</th>
+          <th>Price (UGX)</th>
+          <th>BOOK NOW</th>
+          
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Kampala City Center</td>
+        <td>40km</td>
+        <td>$30</td>
+        <td>100,000/=</td>
+        <td><a href="book.html" class="btn-floating"><i class="material-icons">add</i></a></td>
+      </tr>
+      <tr>
+          <td>Kitooro</td>
+          <td>07km</td>
+          <td>$10</td>
+          <td>30,000/=</td>
+          <td><a href="book.html" class="btn-floating"><i class="material-icons">add</i></a></td>
+      </tr>
+      <tr>
+          <td>Abayita Ababiri</td>
+          <td>13km</td>
+          <td>$15</td>
+          <td>40,000/=</td>
+          <td><a href="book.html" class="btn-floating"><i class="material-icons">add</i></a></td>
+      </tr>
+      <tr>
+          <td>Arua</td>
+          <td>563km</td>
+          <td>$400</td>
+          <td>1,000,000/=</td>
+          <td><a href="book.html" class="btn-floating"><i class="material-icons">add</i></a></td>
+      </tr>
+      <tr>
+          <td>Bahai Temple</td>
+          <td>49km</td>
+          <td>$45</td>
+          <td>120,000/=</td>
+          <td><a href="book.html" class="btn-floating"><i class="material-icons">add</i></a></td>
+      </tr>
+      <tr>
+          <td>Back Packers</td>
+          <td>44km</td>
+          <td>$40</td>
+          <td>100,000/=</td>
+          <td><a href="book.html" class="btn-floating"><i class="material-icons">add</i></a></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+ </div>
+  
+</div> <!---Container End-->    `);
+
+ </script>
+  <!--............................Vanilla js table End.........................-->
+
+
+  <!--.............................Web Component Footer start.........................-->
+  <div id="footer"></div>
+<script type="text/babel">
+    //Web component footer
+const getMessage = () => "Web component footer will come here";
+document.getElementById('footer').innerHTML = getMessage();
+</script>
+<!-----------------------Web Component Footer end---------------->
+
+</body>
+</html>
